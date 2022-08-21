@@ -42,7 +42,10 @@ export default function ImageGallery({ request, page, loadMore }) {
     // }
   }, [page, request]);
 
-  const toggleModal = () => {
+  const toggleModal = modalURL => {
+    if (modalURL) {
+      setModalURL(modalURL);
+    }
     setShowModal(prev => !prev);
   };
 
